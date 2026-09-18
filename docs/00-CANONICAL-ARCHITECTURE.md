@@ -4,6 +4,17 @@ Status: SOURCE OF TRUTH
 Mode: DEOS ON
 Rule: PROBE FIRST → MUTATE SECOND → VERIFY ALWAYS
 
+## 0. Repository topology
+This repository is a monorepo.
+
+- /frontend — Next.js application only
+- /backend — Django/DRF application only
+- /docs — architecture, contracts, prompts and handoff documentation
+
+Frontend and backend must not place runtime files in each other's directories.
+AI Studio must build only inside /frontend unless a later task explicitly says otherwise.
+Django work must be contained inside /backend.
+
 ## 1. Product goal
 Build a premium, lightweight neurologist website for Ruhiyyə İbrahimli that combines:
 - personal medical brand
