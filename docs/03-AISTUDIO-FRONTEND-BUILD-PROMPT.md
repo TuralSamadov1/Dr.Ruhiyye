@@ -9,6 +9,16 @@ Read and obey these repository documents first:
 
 Do not invent architecture that conflicts with them.
 
+## Repository boundary
+This is a monorepo.
+Create and modify frontend application code only under:
+- /frontend
+
+Do not create Django/backend code in this task.
+Do not place Next.js runtime files at repository root.
+Do not modify /backend.
+Keep /docs intact unless explicitly asked.
+
 ## Stack
 - Next.js
 - TypeScript
